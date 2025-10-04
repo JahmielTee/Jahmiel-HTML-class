@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Jahmiel Bootcamp - 7 Days to Web Wizardry</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+        <style>
+            :root {
+                --switcher-bg: #e5e7eb;
+                --switcher-checked-bg: #7c3aed;
+            }
+            .dark {
+                --switcher-bg: #374151;
+                --switcher-checked-bg: #8b5cf6;
+            }
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #667eea;
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #667eea; }
+        }
+    </style>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+    <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="code" class="text-purple-600 dark:text-purple-400"></i>
+                    <span class="text-xl font-bold text-gray-800 dark:text-gray-200">HTML Hero Bootcamp</span>
+                </div>
+                <div class="flex items-center">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="theme-toggle" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
+                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                            <i data-feather="moon" class="w-4 h-4 dark:hidden"></i>
+                            <i data-feather="sun" class="w-4 h-4 hidden dark:block"></i>
+                        </span>
+                    </label>
+                </div>
+<div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Overview</a>
+                    <a href="#days" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Daily Lessons</a>
+                    <a href="#assignments" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Assignments</a>
+                    <a href="#teacher" class="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Teacher</a>
+</div>
+                <button class="md:hidden">
+                    <i data-feather="menu" class="text-gray-600 dark:text-gray-300"></i>
+</button>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" class="gradient-bg text-white py-20 relative overflow-hidden">
+        <div id="vanta-globe" class="absolute inset-0"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 typewriter">Become a Web Hero</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">7-Day HTML Bootcamp by Jahmiel</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#days" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center">
+                        <i data-feather="play" class="mr-2"></i>
+                        Start Learning
+                    </a>
+                    <a href="#assignments" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center">
+                        <i data-feather="clipboard" class="mr-2"></i>
+                        View Assignments
+                    </a>
+                </div>
+                <div class="mt-12 bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 max-w-md mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">Get the Course Materials</h3>
+                    <div class="space-y-4">
+                        <a href="https://github.com/public-apis/public-apis" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center w-full">
+                            <i data-feather="download" class="mr-2"></i>
+                            Download Course Files (ZIP)
+                        </a>
+                        <div class="text-center">
+                            <p class="text-sm opacity-80 mb-2">Or scan the QR code:</p>
+                            <div class="bg-white p-4 rounded-lg inline-block">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/public-apis/public-apis" alt="QR Code for Course Materials" class="w-32 h-32">
+                            </div>
+                            <p class="text-xs opacity-70 mt-2">Scan to access course resources</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="overview" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Your Journey to HTML Mastery</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">A comprehensive 7-day bootcamp designed to take you from absolute beginner to confident HTML developer with daily lessons, challenges, and real-world projects.</p>
+</div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-xl bg-gradient-to-br from-purple-50 to-blue-50 card-hover">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="book-open" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Daily Concepts</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Clear, concise explanations of HTML fundamentals with practical examples</p>
+</div>
+                
+                <div class="text-center p-8 rounded-xl bg-gradient-to-br from-blue-50 to-green-50 card-hover">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="code" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Hands-on Challenges</h3>
+                    <p class="text-gray-600">Practice what you learn with daily mini-challenges and assignments</p>
+                </div>
+                
+                <div class="text-center p-8 rounded-xl bg-gradient-to-br from-green-50 to-purple-50 card-hover">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="award" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Build Real Projects</h3>
+                    <p class="text-gray-600">Create your first website by combining all concepts in the final project</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="days" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">7 Days to HTML Mastery</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">Step-by-step learning path designed by Jahmiel</p>
+</div>
+
+            <div class="space-y-12">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover transition-colors duration-300">
+<div class="bg-gradient-to-r from-purple-600 to-blue-600 p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">Day 1 – HTML Skeleton & Structure</h3>
+                            <span class="bg-white text-purple-600 px-4 py-1 rounded-full font-semibold">Foundation</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-3">Concept Snapshot</h4>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Every HTML page starts with &lt;!DOCTYPE html&gt;. Use &lt;html&gt;, &lt;head&gt;, &lt;title&gt;, &lt;body&gt; to build the skeleton.</p>
+<h4 class="text-lg font-semibold text-gray-800 mb-3">Code Example</h4>
+                                <pre class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg overflow-x-auto text-gray-800 dark:text-gray-200"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is my first paragraph!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Mini Challenges</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Change the title inside &lt;title&gt; to your name</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Add a second &lt;p&gt; paragraph with a short description of yourself</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                                    <div class="flex items-start">
+                                        <i data-feather="alert-circle" class="text-yellow-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Pro Tip</h5>
+                                            <p class="text-gray-600 text-sm">Always include the &lt;!DOCTYPE html&gt; declaration - it tells the browser you're using HTML5!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-blue-600 to-green-600 p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">Day 2 – Headings & Paragraphs</h3>
+                            <span class="bg-white text-blue-600 px-4 py-1 rounded-full font-semibold">Text Basics</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Concept Snapshot</h4>
+                                <p class="text-gray-600 mb-4">&lt;h1&gt; to &lt;h6&gt; are headings (H1 is biggest). &lt;p&gt; is for paragraphs.</p>
+                                
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Code Example</h4>
+                                <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;h1&gt;My Biography&lt;/h1&gt;
+&lt;h2&gt;About Me&lt;/h2&gt;
+&lt;p&gt;I love learning web development.&lt;/p&gt;
+&lt;p&gt;My dream is to build my own website soon.&lt;/p&gt;</code></pre>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Mini Challenges</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Create 3 headings (&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;) with different titles</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Write 3 short paragraphs under them</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                                    <div class="flex items-start">
+                                        <i data-feather="info" class="text-blue-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Remember</h5>
+                                            <p class="text-gray-600 text-sm">Use only one &lt;h1&gt; per page for SEO best practices!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-green-600 to-yellow-600 p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">Day 3 – Links & Images</h3>
+                            <span class="bg-white text-green-600 px-4 py-1 rounded-full font-semibold">Multimedia</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Concept Snapshot</h4>
+                                <p class="text-gray-600 mb-4">&lt;a href='URL'&gt; creates a link. &lt;img src='image.jpg' alt='description'&gt; displays an image.</p>
+                                
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Code Example</h4>
+                                <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;a href="https://google.com" target="_blank"&gt;Visit Google&lt;/a&gt;
+&lt;img src="myphoto.jpg" alt="Me smiling" width="200"&gt;</code></pre>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Mini Challenges</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Add a link to your favorite website (make it open in a new tab)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Add any image (download one and put it in the same folder)</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-6">
+                                    <img src="http://static.photos/technology/640x360/1" alt="Web development illustration" class="rounded-lg shadow-md w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-yellow-600 to-orange-600 p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">Day 4 – Lists</h3>
+                            <span class="bg-white text-yellow-600 px-4 py-1 rounded-full font-semibold">Organization</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Concept Snapshot</h4>
+                                <p class="text-gray-600 mb-4">&lt;ul&gt; = unordered list, &lt;ol&gt; = ordered list, &lt;li&gt; = list item.</p>
+                                
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Code Example</h4>
+                                <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;h2&gt;My Grocery List&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Bread&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+    &lt;li&gt;Eggs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Steps to Get Ready&lt;/h2&gt;
+&lt;ol&gt;
+    &lt;li&gt;Wake up&lt;/li&gt;
+    &lt;li&gt;Brush teeth&lt;/li&gt;
+    &lt;li&gt;Eat breakfast&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Mini Challenges</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Make a list of your top 5 favorite songs, foods, or hobbies</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Try both &lt;ul&gt; and &lt;ol&gt; and see the difference</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-6 p-4 bg-purple-50 rounded-lg border-l-4 border-purple-400">
+                                    <div class="flex items-start">
+                                        <i data-feather="zap" class="text-purple-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Quick Tip</h5>
+                                            <p class="text-gray-600 text-sm">Use &lt;ul&gt; for navigation menus and &lt;ol&gt; for step-by-step instructions!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-orange-600 to-red-600 p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">Day 5 – Divs, Spans & Line Breaks</h3>
+                            <span class="bg-white text-orange-600 px-4 py-1 rounded-full font-semibold">Structure</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Concept Snapshot</h4>
+                                <p class="text-gray-600 mb-4">&lt;div&gt; groups content, &lt;span&gt; styles inline text, &lt;br&gt; makes a line break.</p>
+                                
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Code Example</h4>
+                                <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;div&gt;
+    &lt;h2&gt;My Section&lt;/h2&gt;
+    &lt;p&gt;This is one section of my page.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is normal text but
+&lt;span style="color: red;"&gt;this part is red!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Line one&lt;br&gt;Line two&lt;br&gt;Line three&lt;/p&gt;</code></pre>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Mini Challenges</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Create a section &lt;div&gt; with a heading and paragraph inside</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Use &lt;span&gt; to color one word differently</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
+                                    <div class="flex items-start">
+                                        <i data-feather="help-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Did You Know?</h5>
+                                            <p class="text-gray-600 text-sm">&lt;div&gt; is a block-level element while &lt;span&gt; is inline!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-red-600 to-pink-600 p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">Day 6 – Forms (Intro)</h3>
+                            <span class="bg-white text-red-600 px-4 py-1 rounded-full font-semibold">Interactivity</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Concept Snapshot</h4>
+                                <p class="text-gray-600 mb-4">&lt;form&gt; groups input fields. &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt; let users type or click.</p>
+                                
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Code Example</h4>
+                                <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;form&gt;
+    &lt;label&gt;Name:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;label&gt;Email:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="email"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;label&gt;Message:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+    &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Mini Challenges</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Add a new input for 'Age' (&lt;input type='number'&gt;)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Add a checkbox with the label 'I agree'</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-6 p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-400">
+                                    <div class="flex items-start">
+                                        <i data-feather="star" class="text-indigo-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Pro Tip</h5>
+                                            <p class="text-gray-600 text-sm">Always use proper &lt;label&gt; elements for accessibility!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-r from-pink-600 to-purple-600 p-6 text-white">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">Day 7 – Final Project</h3>
+                            <span class="bg-white text-pink-600 px-4 py-1 rounded-full font-semibold">Capstone</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Concept Snapshot</h4>
+                                <p class="text-gray-600 mb-4">Combine everything into a single mini-site.</p>
+                                
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Code Example</h4>
+                                <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;Hello! I'm learning HTML and this is my first site.&lt;/p&gt;
+    &lt;h2&gt;My Hobbies&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Reading&lt;/li&gt;
+        &lt;li&gt;Coding&lt;/li&gt;
+        &lt;li&gt;Music&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Favorite Link&lt;/h2&gt;
+    &lt;a href="https://example.com" target="_blank"&gt;Check this out&lt;/a&gt;
+    &lt;h2&gt;Contact Me&lt;/h2&gt;
+    &lt;form&gt;
+        &lt;label&gt;Name:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="text"&gt;&lt;br&gt;&lt;br&gt;
+        &lt;button type="submit"&gt;Send&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-3">Mini Challenges</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Add an image of yourself or something you like</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Add another section with &lt;h2&gt; and a paragraph</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <span>Make it look neat and presentable — this is your first real website!</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border-l-4 border-purple-400">
+                                    <div class="flex items-start">
+                                        <i data-feather="award" class="text-purple-500 mr-2 mt-1 flex-shrink-0"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Congratulations!</h5>
+                                            <p class="text-gray-600 text-sm">You've completed the 7-day HTML bootcamp! You now have the foundation to build any website.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="assignments" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Daily Assignments</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">Complete these assignments to reinforce your learning</p>
+</div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 rounded-xl p-6 card-hover transition-colors duration-300">
+                    <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-lg">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Day 1 Assignment</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+<li>Create your first HTML file</li>
+                        <li>Add proper HTML structure</li>
+                        <li>Include heading and paragraphs</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-lg">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Day 2 Assignment</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Create a biography page</li>
+                        <li>Use multiple heading levels</li>
+                        <li>Write descriptive paragraphs</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-yellow-50 rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-lg">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Day 3 Assignment</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Add external links</li>
+                        <li>Include images</li>
+                        <li>Practice image attributes</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-lg">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Day 4 Assignment</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Create ordered lists</li>
+                        <li>Create unordered lists</li>
+                        <li>Practice list nesting</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-lg">5</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Day 5 Assignment</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Use div containers</li>
+                        <li>Style with span elements</li>
+                        <li>Practice line breaks</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-lg">6</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Day 6 Assignment</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Build a contact form</li>
+                        <li>Add various input types</li>
+                        <li>Style form elements</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl p-6 card-hover md:col-span-2 lg:col-span-3">
+                    <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white font-bold text-lg">7</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Final Project Assignment</h3>
+                    <p class="text-gray-600 mb-4">Combine all concepts learned throughout the week to create your personal portfolio website.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Create complete HTML structure</li>
+                        <li>Include headings, paragraphs, and lists</li>
+                        <li>Add images and links</li>
+                        <li>Implement a contact form</li>
+                        <li>Ensure proper semantic structure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teacher" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Meet Your Instructor</h2>
+                <p class="text-xl text-gray-600">Learn from an experienced web developer</p>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden max-w-4xl mx-auto transition-colors duration-300">
+<div class="md:flex">
+                    <div class="md:w-1/3 bg-gradient-to-br from-purple-600 to-blue-600 p-8 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="w-32 h-32 bg-white rounded-full mx-auto mb-4 overflow-hidden">
+                                <img src="http://static.photos/technology/320x240/7" alt="Jahmiel" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold">Jahmiel</h3>
+                            <p class="opacity-90">Senior Web Developer</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h4 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">About Jahmiel</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+With over 8 years of experience in web development, Jahmiel has helped thousands of students 
+                            start their journey in web development. His passion for teaching and expertise in front-end 
+                            technologies make him the perfect guide for your HTML learning adventure.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-center">
+                                <i data-feather="award" class="text-purple-600 mr-3"></i>
+                            <span class="text-gray-700 dark:text-gray-300">8+ Years Experience</span>
+</div>
+                            <div class="flex items-center">
+                                <i data-feather="users" class="text-purple-600 mr-3"></i>
+                            <span class="text-gray-700 dark:text-gray-300">5,000+ Students</span>
+</div>
+                            <div class="flex items-center">
+                                <i data-feather="code" class="text-purple-600 mr-3"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Full-Stack Expert</span>
+</div>
+                            <div class="flex items-center">
+                                <i data-feather="heart" class="text-purple-600 mr-3"></i>
+                            <span class="text-gray-700 dark:text-gray-300">Passionate Teacher</span>
+</div>
+                        </div>
+                        <div class="bg-purple-50 dark:bg-purple-900/30 rounded-lg p-4">
+                            <p class="text-purple-800 dark:text-purple-200 italic">
+"HTML is the foundation of the web. Master it, and you'll have the power to bring your ideas to life. 
+                                This bootcamp is designed to give you that foundation in just 7 days!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 dark:bg-gray-950 text-white py-12 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="code" class="text-purple-400"></i>
+                        <span class="text-xl font-bold">HTML Hero Bootcamp</span>
+                    </div>
+                    <p class="text-gray-400 dark:text-gray-500">Your journey to becoming a web development hero starts here.</p>
+</div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 dark:text-gray-500">
+<li><a href="#overview" class="hover:text-white transition-colors">Overview</a></li>
+                        <li><a href="#days" class="hover:text-white transition-colors">Daily Lessons</a></li>
+                        <li><a href="#assignments" class="hover:text-white transition-colors">Assignments</a></li>
+                        <li><a href="#teacher" class="hover:text-white transition-colors">Teacher</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+<i data-feather="github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 HTML Hero Bootcamp. Created by Jahmiel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+        <script>
+            // Add dark mode class to html if saved in localStorage
+            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+// Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Check for saved theme or preferred scheme
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggle.checked = true;
+        }
+        
+        // Listen for toggle changes
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+            feather.replace(); // Refresh icons
+        });
+
+        // Initialize Vanta.js globe animation
+VANTA.GLOBE({
+            el: "#vanta-globe",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x667eea,
+            backgroundColor: 0x0,
+            size: 1.00
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animation for cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
